@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="invoice">
+        <div class="header">
+            <h1>Postre y Tortas Marleny</h1>
+            <p>RNC: 123-123456-1</p>
+            <p>C/San Rafael #18, Cevicos</p>
+            <p>Tel: 809-585-0302 – WhatsApp: 809-322-6836</p>
+        </div>
+        <div class="invoice-details">
+            <p>Factura No.: <span id="numeroRecord">___________</span></p>
+            <p>Fecha Venta: <span id="fechaRegistro">___________</span></p>
+            <p>Hora: <span id="horaVenta">___________</span></p>
+        </div>
+        <table class="items">
+            <thead>
+                <tr>
+                    <th>CANT.</th>
+                    <th>DESCRIPCIÓN</th>
+                    <th>PRECIO</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody id="items">
+                <!-- Aquí se agregarán los artículos -->
+            </tbody>
+        </table>
+        <div class="totals">
+            <p>EFECTIVO RECIBIDO: <span id="efectivoRecibido">___________</span></p>
+            <p>DEVUELTA: <span id="devuelta">___________</span></p>
+            <p>TOTAL: <span id="total">___________</span></p>
+        </div>
+        <div class="footer">
+            <p>***Gracias por preferirnos***</p>
+            <p>No aceptamos devueltas</p>
+            <p>No hacemos reembolso</p>
+            <p>Usuario que atendió: <span id="usuarioAtendio">___________</span></p>
+        </div>
+    </div>
+
+    <script>
+        // Captura los parámetros de la URL:
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('fechaRegistro').textContent = urlParams.get('fechaRegistro') || '___________';
+        document.getElementById('numeroRecord').textContent = urlParams.get('numeroRecord') || '___________';
+        document.getElementById('horaVenta').textContent = urlParams.get('horaVenta') || '___________';
+        document.getElementById('total').textContent = urlParams.get('total') || '___________';
+        document.getElementById('usuarioAtendio').textContent = urlParams.get('usuarioAtendio') || '___________';
+
+        // Obtener y procesar los artículos de la URL
+        const articulos = urlParams.get('articulos') || '';
+        const items = articulos.split('|').map(item => {
+            const [cantidad, descripcion, precio, total] = item.split(',');
+            return { cantidad, descripcion, precio, total };
+        });
+
+        // Insertar los artículos en la tabla
+        const itemsTable = document.getElementById('items');
+        items.forEach(item => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.cantidad}</td>
+                <td>${item.descripcion}</td>
+                <td>${item.precio}</td>
+                <td>${item.total}</td>
+            `;
+            itemsTable.appendChild(row);
+        });
+
+        // Activar impresión automáticamente
+        window.onload = function() {
+            window.print();
+        };
+    </script>
+</body>
+</html>
+
