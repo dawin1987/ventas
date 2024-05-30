@@ -57,7 +57,7 @@
         // Obtener y procesar los artículos de la URL
         const articulos = urlParams.get('articulos') || '';
         const items = articulos.split('|').map(item => {
-            const [cantidad, descripcion, precio, total] = item.split(',,');
+            const [cantidad, descripcion, precio, total] = item.split(',');
             return { cantidad, descripcion, precio, total };
         });
 
