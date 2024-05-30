@@ -52,7 +52,7 @@
         document.getElementById('numeroRecord').textContent = urlParams.get('numeroRecord') || '___________';
         document.getElementById('horaVenta').textContent = urlParams.get('horaVenta') || '___________';
         document.getElementById('total').textContent = urlParams.get('total') || '___________';
-        document.getElementById('usuarioAtendio').textContent = urlParams.get('usuarioAtendio') || '___________';
+        document.getElementById('usuarioAtendio').textContent = urlParams.get('usuario') || '___________';
 
         // Obtener y procesar los artículos de la URL
         const articulos = urlParams.get('articulos') || '';
@@ -81,4 +81,3 @@
     </script>
 </body>
 </html>
-
