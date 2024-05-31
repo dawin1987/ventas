@@ -56,23 +56,22 @@
         document.getElementById('efectivoRecibido').textContent = urlParams.get('efectivoRecibido') || '___________';
         document.getElementById('devuelta').textContent = urlParams.get('devuelta') || '___________';
         
-
-       // Obtener y procesar los artículos de la URL
+// Obtener y procesar los artículos de la URL
 const articulos = urlParams.get('articulos') || '';
 console.log('Artículos:', articulos);
 
 const items = (articulos || '').split('|').map(item => {
     const [cantidad, descripcion, precio, total] = item.split(',');
     return {
-        cantidad: cantidad || '',
-        descripcion: descripcion || '',
-        precio: precio || '',
-        total: total || ''
+        cantidad: cantidad || 'N/A',
+        descripcion: descripcion || 'N/A',
+        precio: precio || 'N/A',
+        total: total || 'N/A'
     };
 });
 
-// Filtrar artículos válidos (que no estén vacíos)
-const validItems = items.filter(item => item.cantidad && item.descripcion && item.precio && item.total);
+// Filtrar artículos válidos (al menos una propiedad debe estar presente)
+const validItems = items.filter(item => item.cantidad !== 'N/A' || item.descripcion !== 'N/A' || item.precio !== 'N/A' || item.total !== 'N/A');
 
 console.log('Valid Items:', validItems);
 
@@ -88,6 +87,7 @@ validItems.forEach(item => {
     `;
     itemsTable.appendChild(row);
 });
+
 
 
         // Activar impresión automáticamente
