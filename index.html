@@ -9,16 +9,22 @@
 <body>
     <div class="invoice">
         <div class="header">
-            <h1>Postre y Tortas Marleny</h1>
+            <img src="img/logofarm.jpeg" alt="Logo" class="logo">
+            <h1>WindTecnology</h1>
+		<h2>*La soluccion a tus problemas tecnológicos*</h2>
             <p>RNC: 123-123456-1</p>
             <p>C/San Rafael #18, Cevicos</p>
             <p>Tel: 809-585-0302 – WhatsApp: 809-322-6836</p>
         </div>
+
         <div class="invoice-details">
-            <p>Factura No.: <span id="numeroRecord">___________</span></p>
-            <p>Fecha Venta: <span id="fechaRegistro">___________</span></p>
-            <p>Hora: <span id="horaVenta">___________</span></p>
-        </div>
+    <p>Factura No.: <span id="numeroRecord">___________</span></p>
+    <div class="inline-details">
+        <p>Fecha Venta: <span id="fechaRegistro">___________</span></p>
+        <p>Hora: <span id="horaVenta">___________</span></p>
+    </div>
+</div>
+
         <table class="items">
             <thead>
                 <tr>
@@ -56,39 +62,37 @@
         document.getElementById('efectivoRecibido').textContent = urlParams.get('efectivoRecibido') || '___________';
         document.getElementById('devuelta').textContent = urlParams.get('devuelta') || '___________';
         
-// Obtener y procesar los artículos de la URL
-const articulos = urlParams.get('articulos') || '';
-console.log('Artículos:', articulos);
+        // Obtener y procesar los artículos de la URL
+        const articulos = urlParams.get('articulos') || '';
+        console.log('Artículos:', articulos);
 
-const items = (articulos || '').split('|').map(item => {
-    const [cantidad, descripcion, precio, total] = item.split(',');
-    return {
-        cantidad: cantidad || 'N/A',
-        descripcion: descripcion || 'N/A',
-        precio: precio || 'N/A',
-        total: total || 'N/A'
-    };
-});
+        const items = (articulos || '').split('|').map(item => {
+            const [cantidad, descripcion, precio, total] = item.split(',');
+            return {
+                cantidad: cantidad || 'N/A',
+                descripcion: descripcion || 'N/A',
+                precio: precio || 'N/A',
+                total: total || 'N/A'
+            };
+        });
 
-// Filtrar artículos válidos (al menos una propiedad debe estar presente)
-const validItems = items.filter(item => item.cantidad !== 'N/A' || item.descripcion !== 'N/A' || item.precio !== 'N/A' || item.total !== 'N/A');
+        // Filtrar artículos válidos (al menos una propiedad debe estar presente)
+        const validItems = items.filter(item => item.cantidad !== 'N/A' || item.descripcion !== 'N/A' || item.precio !== 'N/A' || item.total !== 'N/A');
 
-console.log('Valid Items:', validItems);
+        console.log('Valid Items:', validItems);
 
-// Insertar los artículos en la tabla
-const itemsTable = document.getElementById('items');
-validItems.forEach(item => {
-    const row = document.createElement('tr');
-    row.innerHTML = `
-        <td>${item.cantidad}</td>
-        <td>${item.descripcion}</td>
-        <td>${item.precio}</td>
-        <td>${item.total}</td>
-    `;
-    itemsTable.appendChild(row);
-});
-
-
+        // Insertar los artículos en la tabla
+        const itemsTable = document.getElementById('items');
+        validItems.forEach(item => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.cantidad}</td>
+                <td>${item.descripcion}</td>
+                <td>${item.precio}</td>
+                <td>${item.total}</td>
+            `;
+            itemsTable.appendChild(row);
+        });
 
         // Activar impresión automáticamente
         window.onload = function() {
