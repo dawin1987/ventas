@@ -49,29 +49,29 @@ body {
     text-align: left;
     font-size: 12px; /* Ajustar el tamaño de fuente para mejor encaje */
     letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
-    line-height: 1; /* Ajustar el espacio entre líneas */
+    line-height: 1px; /* Ajustar el espacio entre líneas */
 }
 
 .totals p {
     text-align: right;
     font-size: 12px; /* Ajustar el tamaño de fuente para mejor encaje */
     letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
-    line-height: 0.5; /* Ajustar el espacio entre líneas */
+    line-height: 0.5px; /* Ajustar el espacio entre líneas */
 }
 
 .invoice p {
     font-size: 12px; /* Ajustar el tamaño de fuente para mejor encaje */
     letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
-    line-height: 0.8; /* Ajustar el espacio entre líneas */
+    line-height: 0.8px; /* Ajustar el espacio entre líneas */
 }
 
 .invoice h1 {
     font-size: 30px; /* Ajustar el tamaño de fuente para mejor encaje */
     letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
-    line-height: 0.5; /* Ajustar el espacio entre líneas */
+    line-height: 0.5px; /* Ajustar el espacio entre líneas */
 }
 .invoice h2 {
     font-size: 15px; /* Ajustar el tamaño de fuente para mejor encaje */
     letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
-    line-height: 1; /* Ajustar el espacio entre líneas */
+    line-height: 1px; /* Ajustar el espacio entre líneas */
 }
