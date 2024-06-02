@@ -1,7 +1,7 @@
 body {
-    font-family: 'Courier New', Courier, monospace; /* Fuente comÃƒÂºn para recibos */
+    font-family: 'Courier New', Courier, monospace; /* Fuente comÃƒÆ’Ã‚Âºn para recibos */
     letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
-    line-height: 1.2; /* Ajustar el espacio entre lÃƒÂ­neas */
+    line-height: 1.2; /* Ajustar el espacio entre lÃƒÆ’Ã‚Â­neas */
 background-color: #413030;
 }
 
@@ -22,8 +22,8 @@ background-color: #413030;
 
 .header .logo {
     display: block;
-    margin: 0 auto 5px; /* Ajustar mÃƒÂ¡rgenes para mejor encaje */
-    max-width: 50mm; /* Ajustar el tamaÃƒÂ±o de la imagen para que se ajuste al ancho */
+    margin: 0 auto 5px; /* Ajustar mÃƒÆ’Ã‚Â¡rgenes para mejor encaje */
+    max-width: 50mm; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de la imagen para que se ajuste al ancho */
     height: auto;
 }
 
@@ -37,8 +37,8 @@ background-color: #413030;
 }
 
 .inline-details p {
-    margin: 0; /* Eliminar margen entre los pÃƒÂ¡rrafos */
-    padding: 0 4px; /* Espacio entre los elementos */
+    margin: 0; /* Eliminar margen entre los pÃƒÆ’Ã‚Â¡rrafos */
+    padding: 0 0%; /* Espacio entre los elementos */
 }
 
 .items {
@@ -47,34 +47,48 @@ background-color: #413030;
 }
 
 .items th, .items td {
-    border: 1px solid #000;
+    /*border: 1px solid #4e4e4e;*/
+    border-top: 1px solid #2b2a2a; /* bordes de la tabla*/
+    border-bottom: 1px solid #2b2a2a;
     padding: 4px; /* Reducir padding para mejor encaje */
     text-align: left;
-    font-size: 12px; /* Ajustar el tamaÃƒÂ±o de fuente para mejor encaje */
+    font-size: 12px; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
     letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
-    line-height: 10px; /* Ajustar el espacio entre lÃƒÂ­neas */
+    line-height: 10px; /* Ajustar el espacio entre lÃƒÆ’Ã‚Â­neas */
 }
 
 .totals p {
     text-align: right;
-    font-size: 12px; /* Ajustar el tamaÃƒÂ±o de fuente para mejor encaje */
+    font-size: 12px; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
     letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
-    line-height: 10px; /* Ajustar el espacio entre lÃƒÂ­neas */
+    line-height: 15px; /* Ajustar el espacio entre lÃƒÆ’Ã‚Â­neas */
 }
-
+.totals .montototal {
+    
+    font-size: 15px ; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
+    color: rgb(44, 44, 44);
+    font-family: cursive;
+   
+    font-weight: bold;
+ 
+}
+.header p {
+margin-bottom: 5px;
+margin-top: 5px;
+}
 .invoice p {
-    font-size: 12px; /* Ajustar el tamaÃƒÂ±o de fuente para mejor encaje */
+    font-size: 12px; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
     letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
-    line-height: 10px; /* Ajustar el espacio entre lÃƒÂ­neas */
+    line-height: 10px; /* Ajustar el espacio entre lÃƒÆ’Ã‚Â­neas */
 }
 
 .invoice h1 {
-    font-size: 30px; /* Ajustar el tamaÃƒÂ±o de fuente para mejor encaje */
+    font-size: 30px; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
     letter-spacing: 1px; /* Ajustar el espacio entre letras */
-    line-height: 10px; /* Ajustar el espacio entre lÃƒÂ­neas */
+    line-height: 10px; /* Ajustar el espacio entre lÃƒÆ’Ã‚Â­neas */
 }
 .invoice h2 {
-    font-size: 15px; /* Ajustar el tamaÃƒÂ±o de fuente para mejor encaje */
+    font-size: 15px; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
     letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
-    line-height: 15px; /* Ajustar el espacio entre lÃƒÂ­neas */
+    line-height: 15px; /* Ajustar el espacio entre lÃƒÆ’Ã‚Â­neas */
 }
