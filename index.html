@@ -40,11 +40,11 @@
             </tbody>
         </table>
         <div class="totals">
-		<p>SUBTOTAL: <span id="sub_total">___________</span></p>
-	<p class="montototal">TOTAL A PAGAR RD$: <span id="total">___________</span></p>
+		<p>SUBTOTAL: <span id="sub_total">_________</span></p>
+	<p class="montototal">TOTAL A PAGAR RD$: <span id="total">_________</span></p>
             <p> DESCUENTO: <span id="descuento">-N/A-</span></p>
-            <p>EFECTIVO RECIBIDO: <span id="efectivoRecibido">___________</span></p>
-            <p>CAMBIO: <span id="devuelta">___________</span></p>
+            <p>EFECTIVO RECIBIDO: <span id="efectivoRecibido">_________</span></p>
+            <p>CAMBIO: <span id="devuelta">_________</span></p>
         </div>
         <div class="footer">
             <p>------------------------------------------</p>
@@ -58,15 +58,15 @@
     <script>
         // Captura los parámetros de la URL:
         const urlParams = new URLSearchParams(window.location.search);
-        document.getElementById('fechaRegistro').textContent = urlParams.get('fechaRegistro') || '___________';
-        document.getElementById('numeroRecord').textContent = urlParams.get('numeroRecord') || '___________';
-        document.getElementById('horaVenta').textContent = urlParams.get('horaVenta') || '___________';
-	    document.getElementById('sub_total').textContent = urlParams.get('sub_total') || '____N/A____';
-        document.getElementById('total').textContent = urlParams.get('total') || '___________';
+        document.getElementById('fechaRegistro').textContent = urlParams.get('fechaRegistro') || '_________';
+        document.getElementById('numeroRecord').textContent = urlParams.get('numeroRecord') || '_________';
+        document.getElementById('horaVenta').textContent = urlParams.get('horaVenta') || '_________';
+	    document.getElementById('sub_total').textContent = urlParams.get('sub_total') || '___N/A___';
+        document.getElementById('total').textContent = urlParams.get('total') || '_______';
 	document.getElementById('descuento').textContent = urlParams.get('descuento') || '____N/A____';
-        document.getElementById('usuarioAtendio').textContent = urlParams.get('usuario') || '___________';
-        document.getElementById('efectivoRecibido').textContent = urlParams.get('efectivoRecibido') || '___________';
-        document.getElementById('devuelta').textContent = urlParams.get('devuelta') || '___________';
+        document.getElementById('usuarioAtendio').textContent = urlParams.get('usuario') || '_________';
+        document.getElementById('efectivoRecibido').textContent = urlParams.get('efectivoRecibido') || '_________';
+        document.getElementById('devuelta').textContent = urlParams.get('devuelta') || '_________';
         
         // Obtener y procesar los artículos de la URL
         const articulos = urlParams.get('articulos') || '';
