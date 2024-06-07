@@ -40,6 +40,7 @@
             </tbody>
         </table>
         <div class="totals">
+		<p>SUBTOTAL: <span id="sub_total">___________</span></p>
 	<p class="montototal">TOTAL A PAGAR RD$: <span id="total">___________</span></p>
             <p> DESCUENTO: <span id="descuento">-N/A-</span></p>
             <p>EFECTIVO RECIBIDO: <span id="efectivoRecibido">___________</span></p>
@@ -60,6 +61,7 @@
         document.getElementById('fechaRegistro').textContent = urlParams.get('fechaRegistro') || '___________';
         document.getElementById('numeroRecord').textContent = urlParams.get('numeroRecord') || '___________';
         document.getElementById('horaVenta').textContent = urlParams.get('horaVenta') || '___________';
+	    document.getElementById('sub_total').textContent = urlParams.get('sub_total') || '____N/A____';
         document.getElementById('total').textContent = urlParams.get('total') || '___________';
 	document.getElementById('descuento').textContent = urlParams.get('descuento') || '____N/A____';
         document.getElementById('usuarioAtendio').textContent = urlParams.get('usuario') || '___________';
