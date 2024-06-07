@@ -73,21 +73,75 @@ tbody th, td, tr + tr{
 border-bottom: 1px dashed rgb(221, 220, 220);
 }
 
-.totals p {
+/*.totals p {
     text-align: right;
     font-size: 12px; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
-    letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
-    line-height: 15px; /* Ajustar el espacio entre lÃƒÆ’Ã‚Â­neas */
-    margin-right: 26px;
+   /* letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
+    /*line-height: 15px; /* Ajustar el espacio entre lÃƒÆ’Ã‚Â­neas */
+    /* margin-right: 28px;
 }
-.totals .montototal {
+
+/*.totals .montototal {
     
-    font-size: 15px ; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
-    color: rgb(44, 44, 44);
-    /* font-family: cursive; */
-       font-weight: bold;
- 
+font-size: 15px; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
+    
+/*color: rgb(44, 44, 44);
+    
+/* font-family: cursive; */
+    
+/*font-weight: bold;
+}*/
+
+
+
+.totals-table {
+    width: 76%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: right;
+    margin-left: 55px;
 }
+.totals-table th, .totals-table td {
+    padding: 5px;
+    text-align: right;
+    border: 1px solid #ffffff;
+}
+.totals-table th {
+    background-color: #c0c0c0;
+}
+.totals-table .value {
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+.totals-table .total {
+    color: rgb(10, 10, 10);
+    text-align: left;
+}
+.total_a_pagar
+{
+    text-align: left;
+    font-size: 15px; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
+color: #333;
+font-family: cursive; 
+font-weight: bold;
+
+}
+.totals-table .descuento {
+    color: #333;
+    text-align: left;
+}
+.totals-table .efectivoRecibido {
+    color: #333;
+    text-align: left;
+}
+.totals-table .devuelta {
+    color: #333;
+    text-align: left;
+}
+
+
+
 .header p {
 margin-bottom: 5px;
 margin-top: 5px;
