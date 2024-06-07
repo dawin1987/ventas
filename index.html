@@ -15,10 +15,11 @@
             <p>RNC: 123-123456-1</p>
             <p>C/San Rafael #18, Cevicos</p>
             <p>Tel: 809-585-0302 – WhatsApp: 809-322-6836</p>
-		<p>----------------------------------</p>
+            <p>----------------------------------</p>
         </div>
 
         <div class="invoice-details">
+           
     <p>Factura No.: <span id="numeroRecord">___________</span></p>
     <div class="inline-details">
         <p>Fecha Venta: <span id="fechaRegistro">___________</span></p>
@@ -37,15 +38,50 @@
             </thead>
             <tbody id="items">
                 <!-- Aquí se agregarán los artículos -->
+ 
+ <tr>
+    <td>1</td>
+    <td>Artículo 1</td>
+    <td>$10.00</td>
+    <td>$10.00</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>Artículo 2</td>
+    <td>$15.00</td>
+    <td>$30.00</td>
+</tr>
+<!-- Puedes seguir añadiendo más filas -->
+
             </tbody>
         </table>
-        <div class="totals">
-		<p>SUBTOTAL: <span id="sub_total">_________</span></p>
-	<p class="montototal">TOTAL A PAGAR RD$: <span id="total">_________</span></p>
-            <p> DESCUENTO: <span id="descuento">-N/A-</span></p>
-            <p>EFECTIVO RECIBIDO: <span id="efectivoRecibido">_________</span></p>
-            <p>CAMBIO: <span id="devuelta">_________</span></p>
-        </div>
+
+        <table class="totals-table">
+            <tbody>
+
+                <tr>
+                    <td> SUBTOTAL: </td>
+                    <td><span id="sub_total" class="value descuento">___________</span></td>
+                </tr>
+                <tr>
+                    <td class="total_a_pagar"> TOTAL A PAGAR: </td>
+                    <td><span id="total" class="value total">___________</span></td>
+                </tr>
+                <tr>
+                    <td>DESCUENTO:</td>
+                    <td><span id="descuento" class="value descuento">-N/A-</span></td>
+                </tr>
+                <tr>
+                    <td>EFECTIVO RECIBIDO:</td>
+                    <td><span id="efectivoRecibido" class="value efectivoRecibido">___________</span></td>
+                </tr>
+                <tr>
+                    <td>CAMBIO:</td>
+                    <td><span id="devuelta" class="value devuelta">___________</span></td>
+                </tr>
+            </tbody>
+        </table>
+
         <div class="footer">
             <p>------------------------------------------</p>
             <p>***Gracias por preferirnos***</p>
@@ -58,15 +94,15 @@
     <script>
         // Captura los parámetros de la URL:
         const urlParams = new URLSearchParams(window.location.search);
-        document.getElementById('fechaRegistro').textContent = urlParams.get('fechaRegistro') || '_________';
-        document.getElementById('numeroRecord').textContent = urlParams.get('numeroRecord') || '_________';
-        document.getElementById('horaVenta').textContent = urlParams.get('horaVenta') || '_________';
-	    document.getElementById('sub_total').textContent = urlParams.get('sub_total') || '___N/A___';
-        document.getElementById('total').textContent = urlParams.get('total') || '_______';
-	document.getElementById('descuento').textContent = urlParams.get('descuento') || '____N/A____';
-        document.getElementById('usuarioAtendio').textContent = urlParams.get('usuario') || '_________';
-        document.getElementById('efectivoRecibido').textContent = urlParams.get('efectivoRecibido') || '_________';
-        document.getElementById('devuelta').textContent = urlParams.get('devuelta') || '_________';
+        document.getElementById('fechaRegistro').textContent = urlParams.get('fechaRegistro') || '________';
+        document.getElementById('numeroRecord').textContent = urlParams.get('numeroRecord') || '________';
+        document.getElementById('horaVenta').textContent = urlParams.get('horaVenta') || '________';
+        document.getElementById('sub_total').textContent = urlParams.get('sub_total') || '__N/A___';
+        document.getElementById('total').textContent = urlParams.get('total') || '________';
+        document.getElementById('descuento').textContent = urlParams.get('descuento') || '__N/A___';
+        document.getElementById('usuarioAtendio').textContent = urlParams.get('usuario') || '________';
+        document.getElementById('efectivoRecibido').textContent = urlParams.get('efectivoRecibido') || '________';
+        document.getElementById('devuelta').textContent = urlParams.get('devuelta') || '________';
         
         // Obtener y procesar los artículos de la URL
         const articulos = urlParams.get('articulos') || '';
