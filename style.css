@@ -15,9 +15,15 @@ background-color: #413030;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.header, .footer {
+.header {
     text-align: center;
     margin-bottom: 10px; /* Reducido para mejor encaje */
+}
+.footer p {
+    text-align: center;
+    margin-bottom: 5px; /* Reducido para mejor encaje */
+    margin-top: 3px;
+    
 }
 
 .header .logo {
@@ -46,15 +52,25 @@ background-color: #413030;
     border-collapse: collapse;
 }
 
-.items th, .items td {
-    /*border: 1px solid #4e4e4e;*/
-    border-top: 1px solid #2b2a2a; /* bordes de la tabla*/
-    border-bottom: 1px solid #2b2a2a;
+th, td {
+   
+    /*border: 1px solid #020202;
+    border: 1px solid #4e4e4e;*/
+    border-top: 1.5px solid #636262; /* bordes de la tabla*/
+    border-bottom: 1px solid #696969;
     padding: 4px; /* Reducir padding para mejor encaje */
     text-align: left;
     font-size: 12px; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
     letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
     line-height: 10px; /* Ajustar el espacio entre lÃƒÆ’Ã‚Â­neas */
+}
+tbody tr {
+    border-bottom: 2px; /* Eliminamos el borde inferior por defecto */
+border: 0px solid #ddd;
+}
+tbody th, td, tr + tr{
+    border-top: 1px dashed rgb(216, 216, 216); /* Añadimos el borde rojo tipo guion */
+border-bottom: 1px dashed rgb(221, 220, 220);
 }
 
 .totals p {
@@ -68,6 +84,7 @@ background-color: #413030;
     font-size: 15px ; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
     color: rgb(44, 44, 44);
     font-family: cursive;
+   
     font-weight: bold;
  
 }
