@@ -92,21 +92,23 @@
         document.getElementById('usuarioAtendio').textContent = urlParams.get('usuario') || '________';
         document.getElementById('efectivoRecibido').textContent = urlParams.get('efectivoRecibido') || '________';
         document.getElementById('devuelta').textContent = urlParams.get('devuelta') || '________';
-        
-        // Obtener y procesar los artículos de la URL
-        const articulos = urlParams.get('articulos') || '';
+
+
+   // Obtener y procesar los artículos de la URL
+        const articulos = decodeURIComponent(urlParams.get('articulos') || '');
         console.log('Artículos:', articulos);
 
-        const items = (articulos || '').split('|').map(item => {
-            const [cantidad, descripcion, precio, total] = item.split(',');
+        const items = articulos.split('|').map(item => {
+            const [cantidad, descripcion, precio, total] = item.split('~'); // Usar ~ como delimitador
             return {
-                cantidad: cantidad || 'N/A',
-                descripcion: descripcion || 'N/A',
-                precio: precio || 'N/A',
-                total: total || 'N/A'
+                cantidad: decodeURIComponent(cantidad || 'N/A'),
+                descripcion: decodeURIComponent(descripcion || 'N/A'),
+                precio: decodeURIComponent(precio || 'N/A'),
+                total: decodeURIComponent(total || 'N/A')
             };
         });
 
+  
         // Filtrar artículos válidos (al menos una propiedad debe estar presente)
         const validItems = items.filter(item => item.cantidad !== 'N/A' || item.descripcion !== 'N/A' || item.precio !== 'N/A' || item.total !== 'N/A');
 
