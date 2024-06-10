@@ -86,12 +86,12 @@
         document.getElementById('fechaRegistro').textContent = urlParams.get('fechaRegistro') || '________';
         document.getElementById('numeroRecord').textContent = urlParams.get('numeroRecord') || '________';
         document.getElementById('horaVenta').textContent = urlParams.get('horaVenta') || '________';
-        document.getElementById('sub_total').textContent = urlParams.get('sub_total') || '__N/A___';
+        document.getElementById('sub_total').textContent = urlParams.get('sub_total') || 'N/A';
         document.getElementById('total').textContent = urlParams.get('total') || '________';
-        document.getElementById('descuento').textContent = urlParams.get('descuento') || '__N/A___';
+        document.getElementById('descuento').textContent = urlParams.get('descuento') || 'N/A';
         document.getElementById('usuarioAtendio').textContent = urlParams.get('usuario') || '________';
-        document.getElementById('efectivoRecibido').textContent = urlParams.get('efectivoRecibido') || '________';
-        document.getElementById('devuelta').textContent = urlParams.get('devuelta') || '________';
+        document.getElementById('efectivoRecibido').textContent = urlParams.get('efectivoRecibido') || '0';
+        document.getElementById('devuelta').textContent = urlParams.get('devuelta') || '0';
 
 
    // Obtener y procesar los artículos de la URL
