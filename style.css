@@ -3,6 +3,7 @@ body {
     letter-spacing: -0.5px; /* Ajustar el espacio entre letras */
     line-height: 1.2; /* Ajustar el espacio entre lÃƒÆ’Ã‚Â­neas */
 background-color: #c5323200;
+        font-weight: bold;
 }
 
 .invoice {
@@ -12,8 +13,9 @@ background-color: #c5323200;
     padding: 8px; /* Ajustar padding para mejor encaje */
     /* border: 1px solid #000; */
     background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
+
 
 .header {
     text-align: center;
@@ -23,7 +25,7 @@ background-color: #c5323200;
     text-align: center;
     margin-bottom: 5px; /* Reducido para mejor encaje */
     margin-top: 3px;
-    
+    font-size: 12px; /* Ajustar el tamaÃƒÆ’Ã‚Â±o de fuente para mejor encaje */
 }
 
 .header .logo {
